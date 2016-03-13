@@ -14,17 +14,16 @@
  * limitations under the License.
  */
 
-package dev.hellpie.dubito.server.types;
+package dev.hellpie.dubito.server.protocol;
 
-public enum CardNumber {
-	CARD_ACE,
-	CARD_TWO,
-	CARD_THREE,
-	CARD_FOUR,
-	CARD_FIVE,
-	CARD_SIX,
-	CARD_SEVEN,
-	CARD_JACK,
-	CARD_KNIGHT,
-	CARD_KING
+public enum PacketType {
+	CLIENT_CONNECT,
+	CLIENT_HANDSHAKE,
+	CLIENT_DISCONNECT,
+	GAME_BEGIN,
+	GAME_MOVE,
+	GAME_END,
+	SHOW_MESSAGE
+
+	// TODO: bind each PacketType to it's actual JSON value counterpart
 }

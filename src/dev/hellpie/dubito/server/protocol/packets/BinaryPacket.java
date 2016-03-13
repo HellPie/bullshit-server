@@ -14,17 +14,26 @@
  * limitations under the License.
  */
 
-package dev.hellpie.dubito.server.types;
+package dev.hellpie.dubito.server.protocol.packets;
 
-public enum CardNumber {
-	CARD_ACE,
-	CARD_TWO,
-	CARD_THREE,
-	CARD_FOUR,
-	CARD_FIVE,
-	CARD_SIX,
-	CARD_SEVEN,
-	CARD_JACK,
-	CARD_KNIGHT,
-	CARD_KING
+// TODO: Finished class BinaryPacket lacks documentation
+public abstract class BinaryPacket {
+
+	private byte[] data;
+
+	public BinaryPacket(byte[] data) {
+		this.data = data;
+	}
+
+	public void setData(byte[] data) {
+		this.data = data;
+	}
+
+	public byte[] getData() {
+		return data;
+	}
+
+	public abstract void encode();
+
+	public abstract void decode();
 }

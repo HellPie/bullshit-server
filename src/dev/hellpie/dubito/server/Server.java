@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 Diego Rossi (@_HellPie)
+ * Copyright 2016 Mattia Bonazza and Diego Rossi (@_HellPie)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,4 +17,5 @@
 package dev.hellpie.dubito.server;
 
 public class Server {
+	//
 }
