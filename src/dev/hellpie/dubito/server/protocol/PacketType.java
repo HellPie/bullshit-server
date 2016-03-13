@@ -14,8 +14,16 @@
  * limitations under the License.
  */
 
-package dev.hellpie.dubito.server;
+package dev.hellpie.dubito.server.protocol;
 
-public class Server {
-	//
+public enum PacketType {
+	CLIENT_CONNECT,
+	CLIENT_HANDSHAKE,
+	CLIENT_DISCONNECT,
+	GAME_BEGIN,
+	GAME_MOVE,
+	GAME_END,
+	SHOW_MESSAGE
+
+	// TODO: bind each PacketType to it's actual JSON value counterpart
 }

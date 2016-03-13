@@ -14,8 +14,26 @@
  * limitations under the License.
  */
 
-package dev.hellpie.dubito.server;
+package dev.hellpie.dubito.server.protocol.packets;
 
-public class Server {
-	//
+// TODO: Finished class BinaryPacket lacks documentation
+public abstract class BinaryPacket {
+
+	private byte[] data;
+
+	public BinaryPacket(byte[] data) {
+		this.data = data;
+	}
+
+	public void setData(byte[] data) {
+		this.data = data;
+	}
+
+	public byte[] getData() {
+		return data;
+	}
+
+	public abstract void encode();
+
+	public abstract void decode();
 }
