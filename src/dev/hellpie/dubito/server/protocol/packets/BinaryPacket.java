@@ -19,18 +19,18 @@ package dev.hellpie.dubito.server.protocol.packets;
 // TODO: Finished class BinaryPacket lacks documentation
 public abstract class BinaryPacket {
 
-	private byte[] data;
+	private String jsonData;
 
-	public BinaryPacket(byte[] data) {
-		this.data = data;
+	public BinaryPacket(String jsonData) {
+		this.jsonData = jsonData;
 	}
 
-	public void setData(byte[] data) {
-		this.data = data;
+	public void setData(String data) {
+		this.jsonData = data;
 	}
 
-	public byte[] getData() {
-		return data;
+	public String getJSONData() {
+		return jsonData;
 	}
 
 	public abstract void encode();

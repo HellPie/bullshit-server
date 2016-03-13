@@ -16,14 +16,25 @@
 
 package dev.hellpie.dubito.server.protocol;
 
-public enum PacketType {
-	CLIENT_CONNECT,
-	CLIENT_HANDSHAKE,
-	CLIENT_DISCONNECT,
-	GAME_BEGIN,
-	GAME_MOVE,
-	GAME_END,
-	SHOW_MESSAGE
+import com.sun.istack.internal.NotNull;
 
-	// TODO: bind each PacketType to it's actual JSON value counterpart
+// NOTICE: Enum PacketType is not finished, contains unplanned values and is subject to major changes
+public enum PacketType {
+	CLIENT_CONNECT("client_connect"),
+	CLIENT_HANDSHAKE("client_handshake"),
+	CLIENT_DISCONNECT("client_disconnect"),
+	GAME_BEGIN("game_begin"),
+	GAME_MOVE("game_move"),
+	GAME_END("game_end"),
+	SHOW_MESSAGE("show_message");
+
+	private final String jsonBind;
+
+	PacketType(@NotNull String jsonBind) {
+		this.jsonBind = jsonBind;
+	}
+
+	private String getJSONBind() {
+		return jsonBind;
+	}
 }
